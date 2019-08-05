@@ -1,5 +1,6 @@
 stage('AnsibleTest') {
   node('aws') {
+    checkout scm
     try {
       sh 'ansible --version'
       // https://github.com/jenkinsci/ansible-plugin#pipeline-support
