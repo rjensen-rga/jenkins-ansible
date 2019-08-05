@@ -2,6 +2,8 @@ stage('AnsibleTest') {
   node('aws') {
     try {
       sh 'ansible --version'
+      // https://github.com/jenkinsci/ansible-plugin#pipeline-support
+      ansiblePlaybook(playbook: 'site.yml')
     }
     finally {
       sh 'echo "Hello world from ansible testing!"'

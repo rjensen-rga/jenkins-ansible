@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - name: welcome us to ansible
+      command: echo "This is a first ansible run"
+    - name: run a 2nd task
+      command: echo "This is another echo"
