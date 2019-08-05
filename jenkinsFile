@@ -4,7 +4,7 @@ stage('AnsibleTest') {
       sh 'ansible --version'
     }
     finally {
-      sh 'hello world from ansible testing!'
+      sh 'echo "Hello world from ansible testing!"'
     }
   }
 }
