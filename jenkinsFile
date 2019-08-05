@@ -3,7 +3,8 @@ stage('AnsibleTest') {
     try {
       sh 'ansible --version'
       // https://github.com/jenkinsci/ansible-plugin#pipeline-support
-      ansiblePlaybook(playbook: 'site.yml')
+      // ***NOTE***: the ansiblePlaybook step requires plugin "Ansible plugin" be installed on the Jenkins instance
+      ansiblePlaybook(playbook: './site.yml')
     }
     finally {
       sh 'echo "Hello world from ansible testing!"'
