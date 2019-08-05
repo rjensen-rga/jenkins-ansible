@@ -1,0 +1,10 @@
+stage('AnsibleTest') {
+  node('aws') {
+    try {
+      sh 'ansible --version'
+    }
+    finally {
+      sh 'hello world from ansible testing!'
+    }
+  }
+}
