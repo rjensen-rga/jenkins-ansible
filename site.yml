@@ -1,7 +1,31 @@
 ---
 - hosts: localhost
+  tags:
+    - "debugger01"
+  tasks:
+    - debug: msg="{{ lookup('env','BUILD_TAG') }} debugger01"
+    - name: welcome us to ansible
+      command: echo "This is a first ansible run"
+    - name: run a 2nd task
+      command: echo "This is another echo"
+
+
+- hosts: localhost
+  tags:
+    - "Prophet Manager API"
   tasks:
     - debug: msg="{{ lookup('env','BUILD_TAG') }}"
+    - name: welcome us to ansible
+      command: echo "This is a first ansible run"
+    - name: run a 2nd task
+      command: echo "This is another echo"
+
+
+- hosts: localhost
+  tags:
+    - "debugger02"
+  tasks:
+    - debug: msg="{{ lookup('env','BUILD_TAG') }} debugger02"
     - name: welcome us to ansible
       command: echo "This is a first ansible run"
     - name: run a 2nd task
