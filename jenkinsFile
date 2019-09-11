@@ -3,7 +3,6 @@ stage('AnsibleTest') {
     checkout scm
     try {
       sh 'ansible --version'
-      // adding an extra note right here to test commit hooks
       // https://github.com/jenkinsci/ansible-plugin#pipeline-support
       // ***NOTE***: the ansiblePlaybook step requires plugin "Ansible plugin" be installed on the Jenkins instance
       ansiblePlaybook(playbook: './site.yml')
