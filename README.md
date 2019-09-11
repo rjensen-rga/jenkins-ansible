@@ -1,5 +1,4 @@
 # jenkins-ansible
 
-adding some stuff straight to master
-
 more changes directly in master
+(a little bit of clean-up)
